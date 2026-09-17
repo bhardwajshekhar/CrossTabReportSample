@@ -12,9 +12,7 @@ Minor category sales report · HTML
     --maroon: #8C1D1D;
     --maroon-text: #7B1113;
     --grid: #F2DCDC;
-    --total-date: #F7E9E9;
-    --total-franchise: #F2DCDC;
-    --total-grand: #EDD0D0;
+    --total-row: #F2DCDC;
     --total-grand-border: #C98F8F;
   }
   * { box-sizing: border-box; }
@@ -71,20 +69,12 @@ Minor category sales report · HTML
   }
  
   /* Total rows */
-  .total-row { font-weight: bold; color: var(--maroon-text); }
+  .total-row {
+    background: var(--total-row);
+    font-weight: bold;
+    color: var(--maroon-text);
+  }
   .total-label { text-align: center; }
-  .total-date { background: var(--total-date); }
-  .sample .swatch-code {
-    font-weight: normal;
-    font-size: 10px;
-    opacity: 0.85;
-    margin-left: 6px;
-  }
-  .total-franchise { background: var(--total-franchise); }
-  .total-grand {
-    background: var(--total-grand);
-    border-top: 2px solid var(--total-grand-border);
-  }
   .total-grand td { border-top: 2px solid var(--total-grand-border); }
  
   footer {
@@ -143,8 +133,8 @@ Minor category sales report · HTML
       </thead>
       <tbody>
         <tr>
-          <td class="group-cell" rowspan="33">Corporate</td>
-          <td class="group-cell" rowspan="19">01/01/2026</td>
+          <td class="group-cell" rowspan="26">Corporate</td>
+          <td class="group-cell" rowspan="12">01/01/2026</td>
           <td>Adult Beverage</td><td class="num">$ 0.00</td><td class="num">$ 166.31</td><td class="num">$ 166.31</td><td class="num">$ 0.00</td><td class="num">$ 166.31</td><td class="num">$ 0.00</td><td class="num">$ 562.29</td><td class="num">$ 556.30</td><td class="num">$ 0.00</td><td class="num">$ 556.30</td><td class="num">$ 0.00</td><td class="num">$ 349.00</td><td class="num">$ 320.50</td><td class="num">$ 0.00</td><td class="num">$ 320.50</td>
         </tr>
         <tr>
@@ -177,29 +167,8 @@ Minor category sales report · HTML
         <tr>
           <td>Wings</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 45.95</td><td class="num">$ 45.95</td><td class="num">$ 0.00</td><td class="num">$ 45.95</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td>
         </tr>
-        <tr class="total-row sample" style="background:#FBF0F0; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#FBF0F0 &middot; Maroon tint 5%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#F7E9E9; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#F7E9E9 &middot; Maroon tint 10%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#F2DCDC; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#F2DCDC &middot; Maroon tint 15%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#EDD0D0; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#EDD0D0 &middot; Maroon tint 20%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#FBF3EC; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#FBF3EC &middot; Warm cream</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#FDF2E9; color:#7B1113;">
-          <td class="total-label">TOTAL <span class="swatch-code">#FDF2E9 &middot; Warm sand</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#F4F4F2; color:#2C2C2A;">
-          <td class="total-label">TOTAL <span class="swatch-code">#F4F4F2 &middot; Neutral light</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
-        </tr>
-        <tr class="total-row sample" style="background:#EFEDE7; color:#2C2C2A;">
-          <td class="total-label">TOTAL <span class="swatch-code">#EFEDE7 &middot; Neutral warm gray</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        <tr class="total-row total-date">
+          <td class="total-label">TOTAL</td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
         </tr>
         <tr>
           <td class="group-cell" rowspan="13">01/02/2026</td>
