@@ -1,0 +1,262 @@
+
+
+Minor category sales report · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minor Category Sales Report</title>
+<style>
+  :root {
+    --maroon: #8C1D1D;
+    --maroon-text: #7B1113;
+    --grid: #F2DCDC;
+    --total-date: #F7E9E9;
+    --total-franchise: #F2DCDC;
+    --total-grand: #EDD0D0;
+    --total-grand-border: #C98F8F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 20px 40px;
+    background: #FFFFFF;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--maroon);
+    text-decoration: underline;
+  }
+  .meta {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--maroon);
+  }
+  .table-wrap { overflow-x: auto; }
+  table {
+    width: 100%;
+    min-width: 1400px;
+    border-collapse: collapse;
+    font-size: 11px;
+  }
+  th, td {
+    border: 1px solid var(--grid);
+    padding: 6px 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  thead th {
+    background: var(--maroon);
+    color: #FFFFFF;
+    border-color: var(--maroon);
+    font-weight: bold;
+    text-align: center;
+  }
+  thead th.stub { text-align: center; }
+  td.num, th.num { text-align: right; }
+  thead th.num { text-align: center; }
+  .site-head { text-align: center; }
+ 
+  /* Merged Franchise Name / Busi Date cells: top-left aligned */
+  .group-cell {
+    vertical-align: top;
+    text-align: left;
+  }
+ 
+  /* Total rows */
+  .total-row { font-weight: bold; color: var(--maroon-text); }
+  .total-label { text-align: center; }
+  .total-date { background: var(--total-date); }
+  .sample .swatch-code {
+    font-weight: normal;
+    font-size: 10px;
+    opacity: 0.85;
+    margin-left: 6px;
+  }
+  .total-franchise { background: var(--total-franchise); }
+  .total-grand {
+    background: var(--total-grand);
+    border-top: 2px solid var(--total-grand-border);
+  }
+  .total-grand td { border-top: 2px solid var(--total-grand-border); }
+ 
+  footer {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666666;
+  }
+  .brand { color: var(--maroon); font-weight: bold; }
+ 
+  @page { size: A4 landscape; margin: 10mm; }
+  @media print {
+    body { padding: 0; }
+    .table-wrap { overflow: visible; }
+    table { min-width: 0; font-size: 8px; }
+    th, td { padding: 3px 4px; }
+    thead { display: table-header-group; }
+    tr { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <h1>Minor Category Sales Report</h1>
+  <p class="meta">Sites: Multi | Date Range : 01/01/2026 to 01/02/2026</p>
+ 
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="stub" rowspan="2">Franchise Name</th>
+          <th class="stub" rowspan="2">Busi Date</th>
+          <th class="stub" rowspan="2">Menu Category</th>
+            <th colspan="5" class="site-head">Cicis Pizza #10</th>
+            <th colspan="5" class="site-head">Test Store #13</th>
+            <th colspan="5" class="site-head">Test Store #55</th>
+        </tr>
+        <tr>
+            <th class="num">Comps ($)</th>
+            <th class="num">Gross Sales ($)</th>
+            <th class="num">Net Sales ($)</th>
+            <th class="num">Taxes ($)</th>
+            <th class="num">Total Amount ($)</th>
+            <th class="num">Comps ($)</th>
+            <th class="num">Gross Sales ($)</th>
+            <th class="num">Net Sales ($)</th>
+            <th class="num">Taxes ($)</th>
+            <th class="num">Total Amount ($)</th>
+            <th class="num">Comps ($)</th>
+            <th class="num">Gross Sales ($)</th>
+            <th class="num">Net Sales ($)</th>
+            <th class="num">Taxes ($)</th>
+            <th class="num">Total Amount ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="group-cell" rowspan="33">Corporate</td>
+          <td class="group-cell" rowspan="19">01/01/2026</td>
+          <td>Adult Beverage</td><td class="num">$ 0.00</td><td class="num">$ 166.31</td><td class="num">$ 166.31</td><td class="num">$ 0.00</td><td class="num">$ 166.31</td><td class="num">$ 0.00</td><td class="num">$ 562.29</td><td class="num">$ 556.30</td><td class="num">$ 0.00</td><td class="num">$ 556.30</td><td class="num">$ 0.00</td><td class="num">$ 349.00</td><td class="num">$ 320.50</td><td class="num">$ 0.00</td><td class="num">$ 320.50</td>
+        </tr>
+        <tr>
+          <td>Adult Buffet</td><td class="num">$ 0.00</td><td class="num">$ 939.06</td><td class="num">$ 747.81</td><td class="num">$ 0.00</td><td class="num">$ 747.81</td><td class="num">$ 0.00</td><td class="num">$ 2,247.75</td><td class="num">$ 1,977.84</td><td class="num">$ 0.00</td><td class="num">$ 1,977.84</td><td class="num">$ 0.00</td><td class="num">$ 1,718.28</td><td class="num">$ 1,446.57</td><td class="num">$ 0.00</td><td class="num">$ 1,446.57</td>
+        </tr>
+        <tr>
+          <td>CYO Pizza</td><td class="num">$ 0.00</td><td class="num">$ 120.69</td><td class="num">$ 120.69</td><td class="num">$ 0.00</td><td class="num">$ 120.69</td><td class="num">$ 0.00</td><td class="num">$ 329.68</td><td class="num">$ 303.73</td><td class="num">$ 0.00</td><td class="num">$ 303.73</td><td class="num">$ 0.00</td><td class="num">$ 202.39</td><td class="num">$ 173.03</td><td class="num">$ 0.00</td><td class="num">$ 173.03</td>
+        </tr>
+        <tr>
+          <td>Charges</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 24.02</td><td class="num">$ 24.02</td><td class="num">$ 0.00</td><td class="num">$ 24.02</td><td class="num">$ 0.00</td><td class="num">$ 8.64</td><td class="num">$ 8.64</td><td class="num">$ 0.00</td><td class="num">$ 8.64</td>
+        </tr>
+        <tr>
+          <td>Child Beverage</td><td class="num">$ 0.00</td><td class="num">$ 23.00</td><td class="num">$ 22.37</td><td class="num">$ 0.00</td><td class="num">$ 22.37</td><td class="num">$ 0.00</td><td class="num">$ 61.98</td><td class="num">$ 60.08</td><td class="num">$ 0.00</td><td class="num">$ 60.08</td><td class="num">$ 0.00</td><td class="num">$ 29.00</td><td class="num">$ 28.90</td><td class="num">$ 0.00</td><td class="num">$ 28.90</td>
+        </tr>
+        <tr>
+          <td>Child Buffet</td><td class="num">$ 0.00</td><td class="num">$ 122.69</td><td class="num">$ 119.32</td><td class="num">$ 0.00</td><td class="num">$ 119.32</td><td class="num">$ 0.00</td><td class="num">$ 310.25</td><td class="num">$ 300.26</td><td class="num">$ 0.00</td><td class="num">$ 300.26</td><td class="num">$ 0.00</td><td class="num">$ 151.64</td><td class="num">$ 151.15</td><td class="num">$ 0.00</td><td class="num">$ 151.15</td>
+        </tr>
+        <tr>
+          <td>OLO Deals</td><td class="num">$ 0.00</td><td class="num">$ 11.99</td><td class="num">$ 11.99</td><td class="num">$ 0.00</td><td class="num">$ 11.99</td><td class="num">$ 0.00</td><td class="num">$ 69.96</td><td class="num">$ 69.96</td><td class="num">$ 0.00</td><td class="num">$ 69.96</td><td class="num">$ 0.00</td><td class="num">$ 29.98</td><td class="num">$ 29.98</td><td class="num">$ 0.00</td><td class="num">$ 29.98</td>
+        </tr>
+        <tr>
+          <td>Sides & Desserts</td><td class="num">$ 0.00</td><td class="num">$ 131.27</td><td class="num">$ 131.27</td><td class="num">$ 0.00</td><td class="num">$ 131.27</td><td class="num">$ 0.00</td><td class="num">$ 191.70</td><td class="num">$ 167.72</td><td class="num">$ 0.00</td><td class="num">$ 167.72</td><td class="num">$ 0.00</td><td class="num">$ 126.99</td><td class="num">$ 126.99</td><td class="num">$ 0.00</td><td class="num">$ 126.99</td>
+        </tr>
+        <tr>
+          <td>Specialty Pizza</td><td class="num">$ 0.00</td><td class="num">$ 195.31</td><td class="num">$ 195.31</td><td class="num">$ 0.00</td><td class="num">$ 195.31</td><td class="num">$ 0.00</td><td class="num">$ 179.84</td><td class="num">$ 179.84</td><td class="num">$ 0.00</td><td class="num">$ 179.84</td><td class="num">$ 0.00</td><td class="num">$ 280.46</td><td class="num">$ 278.46</td><td class="num">$ 0.00</td><td class="num">$ 278.46</td>
+        </tr>
+        <tr>
+          <td>Toppings</td><td class="num">$ 0.00</td><td class="num">$ 15.21</td><td class="num">$ 15.21</td><td class="num">$ 0.00</td><td class="num">$ 15.21</td><td class="num">$ 0.00</td><td class="num">$ 17.50</td><td class="num">$ 17.50</td><td class="num">$ 0.00</td><td class="num">$ 17.50</td><td class="num">$ 0.00</td><td class="num">$ 23.92</td><td class="num">$ 23.92</td><td class="num">$ 0.00</td><td class="num">$ 23.92</td>
+        </tr>
+        <tr>
+          <td>Wings</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 45.95</td><td class="num">$ 45.95</td><td class="num">$ 0.00</td><td class="num">$ 45.95</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td><td class="num">$ 21.98</td><td class="num">$ 0.00</td><td class="num">$ 21.98</td>
+        </tr>
+        <tr class="total-row sample" style="background:#FBF0F0; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#FBF0F0 &middot; Maroon tint 5%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#F7E9E9; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#F7E9E9 &middot; Maroon tint 10%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#F2DCDC; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#F2DCDC &middot; Maroon tint 15%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#EDD0D0; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#EDD0D0 &middot; Maroon tint 20%</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#FBF3EC; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#FBF3EC &middot; Warm cream</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#FDF2E9; color:#7B1113;">
+          <td class="total-label">TOTAL <span class="swatch-code">#FDF2E9 &middot; Warm sand</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#F4F4F2; color:#2C2C2A;">
+          <td class="total-label">TOTAL <span class="swatch-code">#F4F4F2 &middot; Neutral light</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr class="total-row sample" style="background:#EFEDE7; color:#2C2C2A;">
+          <td class="total-label">TOTAL <span class="swatch-code">#EFEDE7 &middot; Neutral warm gray</span></td><td class="num">$ 0.00</td><td class="num">$ 1,747.51</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 1,552.26</td><td class="num">$ 0.00</td><td class="num">$ 4,040.92</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 3,703.20</td><td class="num">$ 0.00</td><td class="num">$ 2,942.28</td><td class="num">$ 2,610.12</td><td class="num">$ 0.00</td><td class="num">$ 2,610.12</td>
+        </tr>
+        <tr>
+          <td class="group-cell" rowspan="13">01/02/2026</td>
+          <td>Adult Beverage</td><td class="num">$ 0.00</td><td class="num">$ 458.00</td><td class="num">$ 445.88</td><td class="num">$ 0.00</td><td class="num">$ 445.88</td><td class="num">$ 0.00</td><td class="num">$ 971.51</td><td class="num">$ 962.03</td><td class="num">$ 0.00</td><td class="num">$ 962.03</td><td class="num">$ 0.00</td><td class="num">$ 510.56</td><td class="num">$ 501.97</td><td class="num">$ 0.00</td><td class="num">$ 501.97</td>
+        </tr>
+        <tr>
+          <td>Adult Buffet</td><td class="num">$ 0.00</td><td class="num">$ 2,165.83</td><td class="num">$ 1,854.93</td><td class="num">$ 0.00</td><td class="num">$ 1,854.93</td><td class="num">$ 0.00</td><td class="num">$ 4,005.99</td><td class="num">$ 3,323.25</td><td class="num">$ 0.00</td><td class="num">$ 3,323.25</td><td class="num">$ 0.00</td><td class="num">$ 2,537.46</td><td class="num">$ 2,078.81</td><td class="num">$ 0.00</td><td class="num">$ 2,078.81</td>
+        </tr>
+        <tr>
+          <td>CATERING</td><td class="num">$ 0.00</td><td class="num">$ 144.00</td><td class="num">$ 144.00</td><td class="num">$ 0.00</td><td class="num">$ 144.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td>
+        </tr>
+        <tr>
+          <td>CYO Pizza</td><td class="num">$ 0.00</td><td class="num">$ 91.91</td><td class="num">$ 87.91</td><td class="num">$ 0.00</td><td class="num">$ 87.91</td><td class="num">$ 0.00</td><td class="num">$ 271.63</td><td class="num">$ 271.63</td><td class="num">$ 0.00</td><td class="num">$ 271.63</td><td class="num">$ 0.00</td><td class="num">$ 275.20</td><td class="num">$ 260.53</td><td class="num">$ 0.00</td><td class="num">$ 260.53</td>
+        </tr>
+        <tr>
+          <td>Charges</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 8.19</td><td class="num">$ 8.19</td><td class="num">$ 0.00</td><td class="num">$ 8.19</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td><td class="num">$ 0.00</td>
+        </tr>
+        <tr>
+          <td>Child Beverage</td><td class="num">$ 0.00</td><td class="num">$ 49.00</td><td class="num">$ 48.00</td><td class="num">$ 0.00</td><td class="num">$ 48.00</td><td class="num">$ 0.00</td><td class="num">$ 75.43</td><td class="num">$ 75.43</td><td class="num">$ 0.00</td><td class="num">$ 75.43</td><td class="num">$ 0.00</td><td class="num">$ 44.00</td><td class="num">$ 44.00</td><td class="num">$ 0.00</td><td class="num">$ 44.00</td>
+        </tr>
+        <tr>
+          <td>Child Buffet</td><td class="num">$ 0.00</td><td class="num">$ 253.42</td><td class="num">$ 248.43</td><td class="num">$ 0.00</td><td class="num">$ 248.43</td><td class="num">$ 0.00</td><td class="num">$ 351.08</td><td class="num">$ 351.08</td><td class="num">$ 0.00</td><td class="num">$ 351.08</td><td class="num">$ 0.00</td><td class="num">$ 228.47</td><td class="num">$ 228.47</td><td class="num">$ 0.00</td><td class="num">$ 228.47</td>
+        </tr>
+        <tr>
+          <td>OLO Deals</td><td class="num">$ 0.00</td><td class="num">$ 23.98</td><td class="num">$ 23.98</td><td class="num">$ 0.00</td><td class="num">$ 23.98</td><td class="num">$ 0.00</td><td class="num">$ 101.95</td><td class="num">$ 101.95</td><td class="num">$ 0.00</td><td class="num">$ 101.95</td><td class="num">$ 0.00</td><td class="num">$ 69.96</td><td class="num">$ 69.96</td><td class="num">$ 0.00</td><td class="num">$ 69.96</td>
+        </tr>
+        <tr>
+          <td>Sides & Desserts</td><td class="num">$ 0.00</td><td class="num">$ 104.69</td><td class="num">$ 104.69</td><td class="num">$ 0.00</td><td class="num">$ 104.69</td><td class="num">$ 0.00</td><td class="num">$ 160.39</td><td class="num">$ 160.39</td><td class="num">$ 0.00</td><td class="num">$ 160.39</td><td class="num">$ 0.00</td><td class="num">$ 177.80</td><td class="num">$ 177.80</td><td class="num">$ 0.00</td><td class="num">$ 177.80</td>
+        </tr>
+        <tr>
+          <td>Specialty Pizza</td><td class="num">$ 0.00</td><td class="num">$ 119.90</td><td class="num">$ 119.90</td><td class="num">$ 0.00</td><td class="num">$ 119.90</td><td class="num">$ 0.00</td><td class="num">$ 302.98</td><td class="num">$ 302.98</td><td class="num">$ 0.00</td><td class="num">$ 302.98</td><td class="num">$ 0.00</td><td class="num">$ 273.99</td><td class="num">$ 273.99</td><td class="num">$ 0.00</td><td class="num">$ 273.99</td>
+        </tr>
+        <tr>
+          <td>Toppings</td><td class="num">$ 0.00</td><td class="num">$ 5.54</td><td class="num">$ 5.54</td><td class="num">$ 0.00</td><td class="num">$ 5.54</td><td class="num">$ 0.00</td><td class="num">$ 17.97</td><td class="num">$ 17.97</td><td class="num">$ 0.00</td><td class="num">$ 17.97</td><td class="num">$ 0.00</td><td class="num">$ 17.82</td><td class="num">$ 17.52</td><td class="num">$ 0.00</td><td class="num">$ 17.52</td>
+        </tr>
+        <tr>
+          <td>Wings</td><td class="num">$ 0.00</td><td class="num">$ 7.99</td><td class="num">$ 7.99</td><td class="num">$ 0.00</td><td class="num">$ 7.99</td><td class="num">$ 0.00</td><td class="num">$ 187.81</td><td class="num">$ 187.81</td><td class="num">$ 0.00</td><td class="num">$ 187.81</td><td class="num">$ 0.00</td><td class="num">$ 15.98</td><td class="num">$ 15.98</td><td class="num">$ 0.00</td><td class="num">$ 15.98</td>
+        </tr>
+        <tr class="total-row total-date">
+          <td class="total-label">TOTAL</td><td class="num">$ 0.00</td><td class="num">$ 3,424.26</td><td class="num">$ 3,091.25</td><td class="num">$ 0.00</td><td class="num">$ 3,091.25</td><td class="num">$ 0.00</td><td class="num">$ 6,454.93</td><td class="num">$ 5,762.71</td><td class="num">$ 0.00</td><td class="num">$ 5,762.71</td><td class="num">$ 0.00</td><td class="num">$ 4,151.24</td><td class="num">$ 3,669.03</td><td class="num">$ 0.00</td><td class="num">$ 3,669.03</td>
+        </tr>
+        <tr class="total-row total-franchise">
+          <td class="total-label" colspan="2">TOTAL</td><td class="num">$ 0.00</td><td class="num">$ 5,171.77</td><td class="num">$ 4,643.51</td><td class="num">$ 0.00</td><td class="num">$ 4,643.51</td><td class="num">$ 0.00</td><td class="num">$ 10,495.85</td><td class="num">$ 9,465.91</td><td class="num">$ 0.00</td><td class="num">$ 9,465.91</td><td class="num">$ 0.00</td><td class="num">$ 7,093.52</td><td class="num">$ 6,279.15</td><td class="num">$ 0.00</td><td class="num">$ 6,279.15</td>
+        </tr>
+        <tr class="total-row total-grand">
+          <td class="total-label" colspan="3">TOTAL</td><td class="num">$ 0.00</td><td class="num">$ 5,171.77</td><td class="num">$ 4,643.51</td><td class="num">$ 0.00</td><td class="num">$ 4,643.51</td><td class="num">$ 0.00</td><td class="num">$ 10,495.85</td><td class="num">$ 9,465.91</td><td class="num">$ 0.00</td><td class="num">$ 9,465.91</td><td class="num">$ 0.00</td><td class="num">$ 7,093.52</td><td class="num">$ 6,279.15</td><td class="num">$ 0.00</td><td class="num">$ 6,279.15</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <footer>
+    <span class="brand">plum</span>
+    <span>Copyright &copy; 2026 Plum. All rights reserved</span>
+    <span>Page 1 of 1</span>
+  </footer>
+</body>
+</html>
+ 
+
